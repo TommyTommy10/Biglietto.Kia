@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo di Compleanno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buon Compleanno!</h1>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p>Buon Compleanno!!!</p>
+                    <img src="https://www.canva.com/design/DAGODDZGT88/_PjdHuFWfiR_CbEfxdT3Fg/edit?utm_content=DAGODDZGT88&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="Biglietto di Compleanno" style="width:100%;">
+                </div>
+                <div class="card-back">
+                    <p>Buon Compleanno!!!</p>
+                    <p>"Mi mancherai molto. Mi mancherà quando ti arrabbi, quando litighiamo, quando ci divertiamo, quando scherziamo… Mi mancherà tutto di te. Ogni volta che discutevamo mi lamentavo che succedeva spesso, ma nel profondo, anche se ti avevo contro, non mi dispiaceva perché stavo creando un ricordo di cui non mi sarei dimenticato. Mi hai reso l'ultimo anno di medie indimenticabile. Ricordati sempre che se hai bisogno io ci sono, non importa cosa sia successo, anche se abbiamo litigato, qualsiasi cosa sia successa io ci sono. Non dimenticartelo mai. Questo spero non sia un addio, ma spero sia un arrivederci.
+"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

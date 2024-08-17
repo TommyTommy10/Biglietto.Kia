@@ -21,18 +21,18 @@
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 90%; /* Riduce la larghezza massima */
         }
         h1 {
             font-family: 'Selima', cursive;
-            font-size: 4em;
+            font-size: 2.5em; /* Riduce la dimensione del font */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .card {
             perspective: 1000px;
             margin: 0 auto;
             width: 100%;
-            max-width: 400px;
+            max-width: 300px; /* Riduce la larghezza massima */
         }
         .card-inner {
             position: relative;
@@ -99,14 +99,6 @@
                 cardInner.style.transform = 'rotateY(180deg)';
             } else if (startX < endX - 50) {
                 cardInner.style.transform = 'rotateY(0deg)';
-            }
-        });
-
-        card.addEventListener('click', () => {
-            if (cardInner.style.transform === 'rotateY(180deg)') {
-                cardInner.style.transform = 'rotateY(0deg)';
-            } else {
-                cardInner.style.transform = 'rotateY(180deg)';
             }
         });
     </script>

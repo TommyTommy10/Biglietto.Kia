@@ -52,6 +52,11 @@
         .card-back {
             transform: rotateY(180deg);
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
         @media only screen and (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -94,6 +99,14 @@
                 cardInner.style.transform = 'rotateY(180deg)';
             } else if (startX < endX - 50) {
                 cardInner.style.transform = 'rotateY(0deg)';
+            }
+        });
+
+        card.addEventListener('click', () => {
+            if (cardInner.style.transform === 'rotateY(180deg)') {
+                cardInner.style.transform = 'rotateY(0deg)';
+            } else {
+                cardInner.style.transform = 'rotateY(180deg)';
             }
         });
     </script>

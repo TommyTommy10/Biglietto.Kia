@@ -30,7 +30,7 @@
         }
         .card {
             perspective: 1000px;
-            margin: 40px auto 0; /* Aggiunge più margine superiore */
+            margin: 120px auto 0; /* Aggiunge più margine superiore */
             width: 100%;
             max-width: 300px; /* Riduce la larghezza massima */
         }
@@ -97,9 +97,9 @@
         card.addEventListener('touchend', (e) => {
             const endX = e.changedTouches[0].clientX;
             if (startX > endX + 50) {
-                rotation += 180;
+                rotation -= 180; // Inverte il senso di rotazione
             } else if (startX < endX - 50) {
-                rotation -= 180;
+                rotation += 180; // Inverte il senso di rotazione
             }
             cardInner.style.transform = `rotateY(${rotation}deg)`;
         });

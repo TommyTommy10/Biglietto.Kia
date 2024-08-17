@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regalo di Compleanno</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Selima&display=swap');
         body {
@@ -14,6 +13,7 @@
             padding: 0;
             background: linear-gradient(90deg, #5170ff, #ff66c4);
             color: #fff;
+            overflow: hidden; /* Evita lo scorrimento della pagina */
         }
         .container {
             margin: 50px auto;
@@ -52,31 +52,6 @@
         .card-back {
             transform: rotateY(180deg);
         }
-        img, video {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .vortex {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-top: 100%;
-            overflow: hidden;
-            border-radius: 50%;
-            animation: spin 10s linear infinite;
-        }
-        .vortex img, .vortex video {
-            position: absolute;
-            width: 10%;
-            height: 10%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
         @media only screen and (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -86,10 +61,6 @@
             }
             .card {
                 max-width: 100%;
-            }
-            .vortex img, .vortex video {
-                width: 20%;
-                height: 20%;
             }
         }
     </style>
@@ -107,13 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="vortex">
-            <a href="https://github.com/TommyTommy10/Biglietto.Kia/raw/main/fec79215-2d7d-4ebe-b76a-43a5e856ce10.JPG" data-lightbox="vortex"><img src="https://github.com/TommyTommy10/Biglietto.Kia/raw/main/fec79215-2d7d-4ebe-b76a-43a5e856ce10.JPG" alt="Foto 1"></a>
-            <a href="https://github.com/tuo-username/tuo-repository/raw/main/video1.mp4" data-lightbox="vortex"><video src="https://github.com/tuo-username/tuo-repository/raw/main/video1.mp4" controls></video></a>
-            <!-- Ripeti per le altre foto e video -->
-        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
         const card = document.getElementById('card');
         const cardInner = document.getElementById('card-inner');

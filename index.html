@@ -27,11 +27,11 @@
             font-family: 'Selima', cursive;
             font-size: 2.5em; /* Riduce la dimensione del font */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px; /* Aggiunge margine inferiore */
+            margin-bottom: 100px; /* Aggiunge margine inferiore esagerato */
         }
         .card {
             perspective: 1000px;
-            margin: 0 auto;
+            margin: 100px auto 0; /* Aggiunge margine superiore esagerato */
             width: 100%;
             max-width: 300px; /* Riduce la larghezza massima */
         }
@@ -64,9 +64,11 @@
             }
             h1 {
                 font-size: 2em;
+                margin-bottom: 50px; /* Riduce il margine inferiore per dispositivi mobili */
             }
             .card {
                 max-width: 100%;
+                margin-top: 50px; /* Riduce il margine superiore per dispositivi mobili */
             }
         }
     </style>

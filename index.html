@@ -30,7 +30,7 @@
         }
         .card {
             perspective: 1000px;
-            margin: 0 auto;
+            margin: 20px auto 0; /* Aggiunge margine superiore */
             width: 100%;
             max-width: 300px; /* Riduce la larghezza massima */
         }
@@ -88,6 +88,7 @@
         const card = document.getElementById('card');
         const cardInner = document.getElementById('card-inner');
         let startX;
+        let rotation = 0;
 
         card.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
@@ -96,10 +97,11 @@
         card.addEventListener('touchend', (e) => {
             const endX = e.changedTouches[0].clientX;
             if (startX > endX + 50) {
-                cardInner.style.transform = 'rotateY(180deg)';
+                rotation += 180;
             } else if (startX < endX - 50) {
-                cardInner.style.transform = 'rotateY(0deg)';
+                rotation -= 180;
             }
+            cardInner.style.transform = `rotateY(${rotation}deg)`;
         });
     </script>
 </body>
